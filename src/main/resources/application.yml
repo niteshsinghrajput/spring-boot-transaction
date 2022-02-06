@@ -1,0 +1,29 @@
+logging:
+  level:
+    com.nitesh.appuploaderservice: INFO
+    org.hibernate: DEBUG
+    org.springframework.web: ERROR
+  path: logs
+spring:
+  database:
+    driverClassName: org.postgresql.Driver
+  datasource:
+    plateform: postgres
+    url: jdbc:postgresql://localhost:5432/
+    username: postgres
+    password: passw0rd
+  jpa:
+    database: postgresql
+    hibernate:
+      ddl-auto: update
+    properties:
+      hibernate:
+        formate_sql: false
+        default_schema: flight
+        jdbc:
+          batch_size: 50
+    show-sql: true
+#  jackson:
+#    serialization:
+#      write_dates_as_timestamps: false
+#      fail_on_empty_beans: false
